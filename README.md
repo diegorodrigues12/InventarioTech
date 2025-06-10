@@ -32,9 +32,16 @@ JDBC (conector Java para banco de dados)
 IDE: NetBeans / IntelliJ / VS Code
 
 📋 Funcionalidades
+
 ✅ Cadastro de novos produtos
+
 ✅ Edição de informações dos produtos
+
 ✅ Registro de entrada de estoque
+
 ✅ Registro de saída de estoque
+
 ✅ Listagem completa dos produtos
+
 ✅ Validação simples dos dados
+
