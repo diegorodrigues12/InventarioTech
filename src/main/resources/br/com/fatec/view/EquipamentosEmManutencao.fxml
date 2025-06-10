@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.EquipamentosEmManutencaoController">
+    <stylesheets>
+        <URL value="@/br/com/fatec/css/equipamentosemmanutencao.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="629.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Back.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_sair" layoutX="532.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn_sair_click" prefHeight="49.0" prefWidth="53.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 100;" />
+      <ImageView fx:id="img_sair" fitHeight="35.0" fitWidth="38.0" layoutX="540.0" layoutY="21.0" onMouseClicked="#img_sair_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/seta.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="171.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipamentos em Manutenção" textAlignment="CENTER" wrappingWidth="264.6015625">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <TableView fx:id="table_manutencao" layoutX="63.0" layoutY="116.0" prefHeight="227.0" prefWidth="480.0">
+        <columns>
+          <TableColumn fx:id="column_id" prefWidth="45.0" text="ID" />
+          <TableColumn fx:id="column_equipamento" prefWidth="105.0" text="Equipamento" />
+            <TableColumn fx:id="column_Nserie" prefWidth="75.0" text="N° Série" />
+            <TableColumn fx:id="column_categoria" prefWidth="75.0" text="Categoria" />
+            <TableColumn fx:id="column_descricao" prefWidth="179.0" text="Descrição do serviço" />
+        </columns>
+      </TableView>
+      <GridPane layoutX="183.0" layoutY="366.0" prefHeight="29.0" prefWidth="360.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txt_equipamentoId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="109.0" />
+            <Button fx:id="btn_finalizado" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#btn_finalizado_click" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 20;" text="Finalizado" textFill="WHITE" GridPane.columnIndex="1">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <Text layoutX="158.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="id:" />
+   </children>
+</AnchorPane>

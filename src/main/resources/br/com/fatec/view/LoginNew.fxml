@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="br.com.fatec.controller.LoginNewController">
+    <stylesheets>
+        <URL value="@/br/com/fatec/css/loginnew.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="629.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Back.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="194.0" layoutY="145.0" prefHeight="89.0" prefWidth="219.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="lbl_usuario" promptText="Usuário" />
+            <TextField fx:id="lbl_senha2" GridPane.rowIndex="1" />
+            <PasswordField fx:id="lbl_senha" promptText="Senha" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <Button fx:id="btn_entrar" layoutX="233.0" layoutY="279.0" mnemonicParsing="false" onAction="#btn_entrar_click" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 20;" text="Entrar" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Button>
+      <Text layoutX="245.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER">
+         <font>
+            <Font size="47.0" />
+         </font>
+      </Text>
+      <Text fill="#3cd8ff" layoutX="243.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Não tem um cadastro?" />
+      <Text fx:id="txt_cadastro" layoutX="238.0" layoutY="390.0" onMouseClicked="#txt_cadastro_click" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastre-se">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <CheckBox fx:id="chk_senha" layoutX="332.0" layoutY="241.0" mnemonicParsing="false" onAction="#chk_senha_click" text="Exibir senha" />
+   </children>
+</AnchorPane>

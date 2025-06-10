@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.MenuPrincipalController">
+    <stylesheets>
+        <URL value="@/br/com/fatec/css/menuprincipal.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="629.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Back.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_sair" layoutX="539.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn_sair_click" prefHeight="46.0" prefWidth="48.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 100;" />
+      <ImageView fx:id="img_sair" fitHeight="32.0" fitWidth="33.0" layoutX="547.0" layoutY="21.0" onMouseClicked="#img_sair_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/seta.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="188.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu Principal">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Button fx:id="btn_manutencao" layoutX="84.0" layoutY="168.0" mnemonicParsing="false" onAction="#btn_manutencao_click" prefHeight="66.0" prefWidth="116.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 10;" />
+      <Button fx:id="btn_equipamentos" layoutX="246.0" layoutY="168.0" mnemonicParsing="false" onAction="#btn_equipamentos_click" prefHeight="66.0" prefWidth="116.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 10;" />
+      <Button fx:id="btn_cadEqui" layoutX="418.0" layoutY="168.0" mnemonicParsing="false" onAction="#btn_cadEqui_click" prefHeight="66.0" prefWidth="116.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 10;" />
+      <Button fx:id="btn_consulta" layoutX="341.0" layoutY="284.0" mnemonicParsing="false" onAction="#btn_consulta_click" prefHeight="66.0" prefWidth="116.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 10;" />
+      <Button fx:id="btn_revisar" layoutX="146.0" layoutY="284.0" mnemonicParsing="false" onAction="#btn_revisar_click" prefHeight="66.0" prefWidth="108.0" style="-fx-background-color: #3cd8ff;" />
+      <ImageView fx:id="img_manutencao" fitHeight="57.0" fitWidth="75.0" layoutX="114.0" layoutY="173.0" onMouseClicked="#img_manutencao_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/manutencao.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_equipamentos" fitHeight="57.0" fitWidth="75.0" layoutX="275.0" layoutY="173.0" onMouseClicked="#img_equipamentos_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/EmManutencao.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_cadEqui" fitHeight="57.0" fitWidth="75.0" layoutX="448.0" layoutY="173.0" onMouseClicked="#img_cadEqui_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Equipamentos.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_revisar" fitHeight="57.0" fitWidth="75.0" layoutX="172.0" layoutY="289.0" onMouseClicked="#img_revisar_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/revisao.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="img_consulta" fitHeight="57.0" fitWidth="75.0" layoutX="371.0" layoutY="289.0" onMouseClicked="#img_consulta_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/consulta.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="109.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manutenção">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="232.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipamentos em manutenção" textAlignment="CENTER" wrappingWidth="143.607421875">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="405.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de equipamentos">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="134.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipamentos a revisar">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="349.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulta avançada">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

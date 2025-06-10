@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.ManutencaoController">
+    <stylesheets>
+        <URL value="@/br/com/fatec/css/manutencao.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="629.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Back.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_sair" layoutX="532.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn_sair_click" prefHeight="46.0" prefWidth="51.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 100;" />
+      <ImageView fx:id="img_sair" fitHeight="32.0" fitWidth="39.0" layoutX="542.0" layoutY="21.0" onMouseClicked="#img_sair_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/seta.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="143.0" layoutY="122.0" prefHeight="86.0" prefWidth="323.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="13.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="155.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="25.0" minHeight="7.0" prefHeight="9.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ComboBox fx:id="cmb_equipamento" onAction="#cmb_equipamento_change" prefHeight="25.0" prefWidth="158.0" promptText="Equipamento" />
+            <ComboBox fx:id="cmb_responsavel" onAction="#cmb_equipamento_change" prefHeight="25.0" prefWidth="160.0" promptText="Responsável" GridPane.columnIndex="2" />
+            <TextField fx:id="lbl_Nserie" prefHeight="25.0" prefWidth="148.0" promptText="N° de série" GridPane.rowIndex="2" />
+            <DatePicker fx:id="date_validade" onAction="#date_validade_click" prefHeight="25.0" prefWidth="156.0" promptText="Data" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Text layoutX="213.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manutenção">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="lblA_descricao" layoutX="143.0" layoutY="215.0" prefHeight="94.0" prefWidth="323.0" promptText="Descrição do serviço" />
+      <HBox layoutX="213.0" layoutY="332.0" prefHeight="52.0" prefWidth="210.0" spacing="20.0">
+         <children>
+            <Button fx:id="btn_incluir" mnemonicParsing="false" onAction="#btn_incluir_click" style="-fx-background-color: #3cd8ff; -fx-background-radius: 20;" text="Incluir" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_alterar" mnemonicParsing="false" onAction="#btn_alterar_click" style="-fx-background-color: #3cd8ff; -fx-background-radius: 20;" text="Alterar" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

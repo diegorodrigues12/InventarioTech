@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.fatec.controller.EquipamentosEmRevisaoController">
+    <stylesheets>
+        <URL value="@/br/com/fatec/css/equipamentosemrevisao.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="431.0" fitWidth="629.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/Back.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_sair" layoutX="535.0" layoutY="14.0" mnemonicParsing="false" onAction="#btn_sair_click" prefHeight="49.0" prefWidth="49.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 100;" />
+      <ImageView fx:id="img_sair" fitHeight="34.0" fitWidth="33.0" layoutX="543.0" layoutY="22.0" onMouseClicked="#img_sair_click" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../img/seta.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="182.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipamentos em revisão" textAlignment="CENTER" wrappingWidth="241.544921875">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="92.0" layoutY="132.0" prefHeight="67.0" prefWidth="421.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="lbl_observacao" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="129.0" promptText="Observação" />
+            <ComboBox fx:id="cmb_equipameto" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#cmb_equipameto_change" prefHeight="25.0" prefWidth="129.0" promptText="Equipamento" GridPane.columnIndex="1" />
+            <Button fx:id="btn_inserir" mnemonicParsing="false" onAction="#btn_inserir_click" prefHeight="38.0" prefWidth="141.0" style="-fx-background-color: #3cd8ff; -fx-background-radius: 20;" text="Inserir" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font size="17.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+      <TableView fx:id="table_equipamentos" layoutX="143.0" layoutY="216.0" prefHeight="200.0" prefWidth="295.0">
+        <columns>
+          <TableColumn fx:id="column_nomeEq" prefWidth="148.0" text="Nome do equipamento" />
+          <TableColumn fx:id="column_observacao" minWidth="0.0" prefWidth="146.0" text="Observação" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
